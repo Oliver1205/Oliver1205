@@ -2,32 +2,37 @@
 
 🌱 **华南师范大学 (211/双一流)** | 计算机学院 · 网络工程 本科 (2024 - 2028)
 📫 **Contact me:** [2865598015@qq.com](mailto:2865598015@qq.com)
+✍️ **Motto:** 不断探索底层原理，坚持在重构中实践设计模式。
 
 ---
 
 ## 🛠 技术栈 (Tech Stack)
 
-* **核心语言 & 基础：** 扎实的 Java 基础，熟练掌握 JUC 并发编程、JVM 内存与 GC 机制、常用设计模式。
-* **框架 & 微服务：** 熟练使用 Spring Boot，深入理解 IoC/AOP，熟悉 Spring Cloud 微服务生态。
-* **数据库 & 缓存：** 熟悉 MySQL (InnoDB, 索引, 事务, 分库分表)，熟练掌握 Redis 核心结构及高并发缓存兜底方案。
-* **消息队列 & 中间件：** 熟悉 RocketMQ (异步解耦、削峰填谷、延迟消息)。
+这里记录了我目前掌握和正在深入学习的技术体系：
+
+### 核心语言 & 基础
+![Java](https://img.shields.io/badge/Java-ED8B00?style=for-the-badge&logo=openjdk&logoColor=white)
+![JUC & JVM](https://img.shields.io/badge/JUC_%26_JVM-8A2BE2?style=for-the-badge)
+![Design Patterns](https://img.shields.io/badge/Design_Patterns-0078D4?style=for-the-badge)
+
+### 框架 & 微服务
+![Spring Boot](https://img.shields.io/badge/Spring_Boot-6DB33F?style=for-the-badge&logo=spring-boot&logoColor=white)
+![Spring Cloud](https://img.shields.io/badge/Spring_Cloud-6DB33F?style=for-the-badge&logo=spring&logoColor=white)
+
+### 数据库 & 缓存
+![MySQL](https://img.shields.io/badge/MySQL-005C84?style=for-the-badge&logo=mysql&logoColor=white)
+![Redis](https://img.shields.io/badge/Redis-DC382D?style=for-the-badge&logo=redis&logoColor=white)
+
+### 消息队列 & 工具
+![RocketMQ](https://img.shields.io/badge/RocketMQ-E6522C?style=for-the-badge&logo=apache&logoColor=white)
+![Git](https://img.shields.io/badge/Git-F05032?style=for-the-badge&logo=git&logoColor=white)
 
 ---
 
-## 💻 核心项目 (Featured Projects)
+## 📊 学习进度 & 活跃度 (GitHub Stats)
 
-### 🚄 12306 铁路购票系统 (分布式架构实践)
-*基于 Spring Cloud 构建的高并发分布式售票系统，解决极端并发场景下的超卖与性能痛点。*
-* **高并发扣减：** 采用 **Redis + Lua** 脚本实现区间余票原子扣减，结合 Redisson 看门狗防重复提单，JMeter 实测下单接口吞吐量稳定在 **800+ QPS**，零超卖。
-* **海量数据路由与防护：** 基于 **ShardingSphere-JDBC** 按用户 ID 截取 Hash 取模实现分库分表；网关层引入 **布隆过滤器** (0.1% 误判率) 拦截非法查票，拦截率达 99%+，有效保护 DB。
-* **异步解耦：** 引入 **RocketMQ** 异步处理订单生成与库存扣减；利用 15 分钟延迟消息实现订单超时自动取消，大幅降低 DB 轮询压力。
+> 💡 *这张卡片会自动抓取我在 GitHub 上的各项学习与代码提交数据，实时更新。*
 
-### 🔗 SaaS 高并发短链接系统
-*面向高频访问场景的短链服务，聚焦发号器设计、毫秒级重定向及多级缓存架构。*
-* **发号器与防冲突：** 引入 **Leaf 分布式发号器**配合 Base62 编码生成短链，根治 Hash 冲突；利用 **布隆过滤器** 判重，降低高并发下对 MySQL 唯一索引的依赖。
-* **二级缓存调优：** 采用 302 重定向支撑数据分析，构建 **Caffeine + Redis** 二级缓存。实测 L1 缓存命中率 ~80%，接口 P99 延迟从直连 DB 的 50ms 压降至 **10ms 以内**。
-* **异步削峰写库：** 使用 ShardingSphere 按短链 Hash 路由分库分表；面对高频 UV/PV 统计，通过 **RocketMQ** 异步落库，实现核心重定向链路与边缘统计链路的物理隔离。
-
----
-
-> *"不断探索底层原理，坚持在重构中实践设计模式。"*
+<div align="left">
+  <img src="https://github-readme-stats.vercel.app/api?username=Oliver1205&show_icons=true&theme=radical&hide_border=true" alt="Oliver1205's GitHub Stats" />
+</div>
