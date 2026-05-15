@@ -1,116 +1,91 @@
-<h1 align="center">Hi there, I'm 林宇祥 👋</h1>
+<h1 align="center">林宇祥 / Oliver</h1>
 
 <p align="center">
-  Java 后端方向学习者 / 专注分布式系统、工程实践与面试沉淀
+  Java Backend Developer in Training
 </p>
 
 <p align="center">
-  <img src="https://img.shields.io/badge/Java_Backend-000000?style=for-the-badge&logoColor=white" />
-  <img src="https://img.shields.io/badge/Spring_Cloud-000000?style=for-the-badge&logoColor=white" />
-  <img src="https://img.shields.io/badge/MySQL-000000?style=for-the-badge&logoColor=white" />
-  <img src="https://img.shields.io/badge/Redis-000000?style=for-the-badge&logoColor=white" />
+  <a href="mailto:2865598015@qq.com">Email</a>
+  ·
+  <a href="https://github.com/Oliver1205/12306-pressure-test-lab">12306 Lab</a>
 </p>
 
 ---
 
-## About Me
+## About
 
-- 🎓 **华南师范大学**｜计算机学院 · 网络工程本科（2024 - 2028）
-- 🎯 **目标方向**：Java 后端开发实习
-- 📚 **当前重点**：MySQL、Redis、JVM、Spring Cloud、SQL 场景题、项目表达
-- 🧠 **学习风格**：偏工程实践 + 高频母题 + 面试表达
-- 📫 **Contact**：2865598015@qq.com
+计算机学院网络工程本科生，当前主要面向 **Java 后端开发实习** 做系统化准备。
 
----
-
-## Tech Stack
-
-### 核心语言与基础
-<p>
-  <img src="https://img.shields.io/badge/Java-111111?style=for-the-badge" />
-  <img src="https://img.shields.io/badge/JUC-111111?style=for-the-badge" />
-  <img src="https://img.shields.io/badge/JVM-111111?style=for-the-badge" />
-  <img src="https://img.shields.io/badge/Design_Patterns-111111?style=for-the-badge" />
-</p>
-
-### 框架与微服务
-<p>
-  <img src="https://img.shields.io/badge/Spring-111111?style=for-the-badge" />
-  <img src="https://img.shields.io/badge/Spring_Boot-111111?style=for-the-badge" />
-  <img src="https://img.shields.io/badge/Spring_Cloud-111111?style=for-the-badge" />
-  <img src="https://img.shields.io/badge/Gateway-111111?style=for-the-badge" />
-</p>
-
-### 数据库与缓存
-<p>
-  <img src="https://img.shields.io/badge/MySQL-111111?style=for-the-badge" />
-  <img src="https://img.shields.io/badge/Redis-111111?style=for-the-badge" />
-  <img src="https://img.shields.io/badge/SQL-111111?style=for-the-badge" />
-</p>
-
-### 中间件与工具
-<p>
-  <img src="https://img.shields.io/badge/RocketMQ-111111?style=for-the-badge" />
-  <img src="https://img.shields.io/badge/Nacos-111111?style=for-the-badge" />
-  <img src="https://img.shields.io/badge/Docker-111111?style=for-the-badge" />
-  <img src="https://img.shields.io/badge/Maven-111111?style=for-the-badge" />
-  <img src="https://img.shields.io/badge/Git-111111?style=for-the-badge" />
-</p>
+我更关注把技术从“看过”推进到“能落地、能验证、能复盘、能讲清楚”。  
+近期学习重点集中在 Java 后端核心技术栈、数据库与缓存、高并发场景、项目链路验证和面试表达。
 
 ---
 
-## Featured Project
+## Stack
 
-### 12306 铁路购票系统｜本地部署与压测验证
+<p>
+  <img src="https://img.shields.io/badge/Java-111111?style=flat-square&logoColor=white" />
+  <img src="https://img.shields.io/badge/Spring_Boot-111111?style=flat-square&logoColor=white" />
+  <img src="https://img.shields.io/badge/Spring_Cloud-111111?style=flat-square&logoColor=white" />
+  <img src="https://img.shields.io/badge/MySQL-111111?style=flat-square&logoColor=white" />
+  <img src="https://img.shields.io/badge/Redis-111111?style=flat-square&logoColor=white" />
+  <img src="https://img.shields.io/badge/RocketMQ-111111?style=flat-square&logoColor=white" />
+  <img src="https://img.shields.io/badge/Nacos-111111?style=flat-square&logoColor=white" />
+  <img src="https://img.shields.io/badge/Docker-111111?style=flat-square&logoColor=white" />
+  <img src="https://img.shields.io/badge/Git-111111?style=flat-square&logoColor=white" />
+</p>
 
-基于开源 12306 铁路购票项目，完成了一轮从 **本地部署、核心链路验证到接口压测** 的工程实践，重点围绕 **库存安全、购票链路、幂等控制、异常排查** 展开。
-
-#### 我做了什么
-- 使用 Docker 拉起 **MySQL、Redis、Nacos、RocketMQ**
-- 启动 **SpringBoot 聚合服务 + Gateway**
-- 跑通 **登录、车票查询、乘车人新增、购票下单、订单落库、取消订单** 等核心链路
-- 对查询接口进行本地压测，并验证购票接口的幂等控制能力
-- 排查并解决服务调用中的真实问题，如：
-  - **Nacos 注册 IP 不可达**
-  - **乘车人手工造数与加密字段不兼容**
-  - **订单状态与链路对账口径问题**
-
-#### 第一版压测结果
-| 场景 | 指标 |
+| Area | Focus |
 |---|---|
-| 车票查询接口 | 30 并发 / 300 请求 / 100% 成功 |
-| 查询性能 | QPS ≈ **1103** / Avg RT ≈ **26.42 ms** / P95 ≈ **42.58 ms** / P99 ≈ **47.33 ms** |
-| 购票幂等验证 | 同一用户 10 并发重复提交，**1 次成功下单，9 次被幂等拦截** |
+| Java 基础 | 集合、并发、JVM、设计模式 |
+| 后端框架 | Spring Boot、Spring Cloud、Gateway |
+| 数据库 | MySQL 索引、事务、锁、MVCC、SQL 调优 |
+| 缓存 | Redis、缓存一致性、分布式锁、Lua |
+| 中间件 | RocketMQ、Nacos、Docker |
+| 项目能力 | 链路验证、接口压测、异常排查、面试表达 |
 
-#### 项目价值
-- 更真实地理解了微服务项目的 **启动依赖顺序、服务注册发现、缓存与数据库协作**
-- 对高频面试问题里的 **Redis、Lua、幂等、防重复下单、异常一致性** 有了更强的工程感
-- 不只是“看过项目”，而是做了 **可验证、可复述、可继续迭代** 的本地实践
+---
 
-🔗 项目仓库：`12306-pressure-test-lab`  
-🔗 压测记录：`docs/pressure-test/README.md`
+## Project
+
+### 12306 Railway Ticketing Lab
+
+基于开源 12306 铁路购票项目，完成本地部署、核心链路验证与第一轮接口压测。
+
+| Module | Result |
+|---|---|
+| 本地部署 | SpringBoot 聚合版启动成功 |
+| 中间件 | MySQL、Redis、Nacos、RocketMQ |
+| 核心链路 | 登录、查询、乘车人、购票、订单落库、取消订单 |
+| 查询压测 | 30 并发 / 300 请求 / 0 失败 |
+| 查询性能 | QPS ≈ 1103，P95 ≈ 42.58ms |
+| 幂等验证 | 10 个重复购票请求，1 成功、9 拦截 |
+| 排障记录 | Nacos 注册 IP、加密字段造数、订单状态对账、Redis 令牌桶回滚异常 |
+
+Repository:  
+[github.com/Oliver1205/12306-pressure-test-lab](https://github.com/Oliver1205/12306-pressure-test-lab)
 
 ---
 
 ## Current Focus
 
-- **MySQL**：索引、锁、事务、MVCC、SQL 调优
-- **Redis**：缓存、高并发、Lua、分布式锁
-- **JVM**：内存结构、垃圾回收、类加载
-- **Project**：12306 库存安全、异常一致性、压测与复盘
-- **Interview**：项目表达、八股体系化、SQL 场景题
+- MySQL：索引、事务、锁、MVCC、SQL 优化
+- Redis：缓存、Lua、分布式锁、异常一致性
+- JVM：内存结构、GC、类加载
+- Project：12306 库存安全、购票链路、压测复盘
+- Interview：项目表达、八股体系化、SQL 场景题
 
 ---
 
-## GitHub Stats
+## GitHub
 
-<p>
-  <img height="160" src="https://github-readme-stats.vercel.app/api?username=Oliver1205&show_icons=true&hide_border=true&title_color=000000&text_color=222222&icon_color=000000&bg_color=ffffff" />
-  <img height="160" src="https://github-readme-stats.vercel.app/api/top-langs/?username=Oliver1205&layout=compact&hide_border=true&title_color=000000&text_color=222222&bg_color=ffffff" />
+<p align="center">
+  <img height="160" src="https://github-readme-stats.vercel.app/api?username=Oliver1205&show_icons=true&hide_border=true&title_color=111111&text_color=222222&icon_color=111111&bg_color=ffffff" />
+  <img height="160" src="https://github-readme-stats.vercel.app/api/top-langs/?username=Oliver1205&layout=compact&hide_border=true&title_color=111111&text_color=222222&bg_color=ffffff" />
 </p>
 
 ---
 
-## Motto
-
-> 持续把“会做”沉淀成“会讲”，把“会讲”落实成“能落地”。
+<p align="center">
+  持续把技术学深，把项目做实，把表达练清楚。
+</p>
